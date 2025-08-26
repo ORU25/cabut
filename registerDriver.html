@@ -8,169 +8,232 @@
   <body>
     <center>
       <h1>CABUT</h1>
-      <p>siap antar kamu cabut kemana pun</p>
+      <i>Siap Antar Kamu Cabut Kemana Pun</i>
     </center>
     <br />
-    <div>
-      <h1>Daftar Driver</h1>
-      <form action="home.html">
-        <div>
-          <!-- Informasi akun -->
-          <h3>Informasi Akun</h3>
-          <div>
-            <label for="nama">Nama Lengkap:</label>
-            <input
-              id="nama"
-              type="test"
-              placeholder="masukkan nama lengkap"
-              required
-            />
-          </div>
-          <br />
-          <div>
-            <label for="email">Email:</label>
-            <input
-              id="email"
-              type="email"
-              placeholder="masukkan email"
-              required
-            />
-          </div>
-          <br />
-          <div>
-            <label for="telepon">No. Telepon:</label>
-            <input
-              id="telepon"
-              type="text"
-              placeholder="masukkan nomor telepon"
-              required
-            />
-          </div>
-          <br />
-          <div>
-            <label for="password">Password:</label>
-            <input
-              id="password"
-              type="password"
-              placeholder="masukkan password"
-              required
-            />
-          </div>
-          <br />
-          <div>
-            <label for="confirmPassword">Konfirmasi Password:</label>
-            <input
-              id="confirmPassword"
-              type="password"
-              placeholder="masukkan ulang password"
-              required
-            />
-          </div>
-        </div>
+    <br />
+    <center>
+      <h2>Daftar Driver</h2>
+      <form action="#">
+        <table cellspacing="10">
+          <tr>
+            <td colspan="2">
+              <center>
+                <h3>Informasi Akun</h3>
+                <hr />
+              </center>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="nama">Nama Lengkap:</label>
+            </td>
+            <td>
+              <input
+                id="nama"
+                type="test"
+                placeholder="masukkan nama lengkap"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="email">Email:</label>
+            </td>
+            <td>
+              <input
+                id="email"
+                type="email"
+                placeholder="masukkan email"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="telepon">No. Telepon:</label>
+            </td>
+            <td>
+              <input
+                id="telepon"
+                type="text"
+                placeholder="masukkan nomor telepon"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="password">Password:</label>
+            </td>
+            <td>
+              <input
+                id="password"
+                type="password"
+                placeholder="masukkan password"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="confirmPassword">Konfirmasi Password:</label>
+            </td>
+            <td>
+              <input
+                id="confirmPassword"
+                type="password"
+                placeholder="masukkan ulang password"
+                required
+              />
+            </td>
+          </tr>
 
-        <br />
+          <tr>
+            <td colspan="2">
+              <center>
+                <h3>Informasi Pribadi</h3>
+                <hr />
+              </center>
+            </td>
+          </tr>
 
-        <div>
-          <!-- Informasi pribadi -->
-          <h3>Informasi Pribadi</h3>
-          <div>
-            <label for="nik">NIK:</label>
-            <input id="nik" type="test" placeholder="masukkan nik" required />
-          </div>
-          <br />
-          <div>
-            <label for="alamat">Alamat:</label>
-            <textarea
-              id="alamat"
-              rows="3"
-              placeholder="masukkan alamat"
-              required
-            ></textarea>
-          </div>
-          <br />
-          <div>
-            <label for="tanggalLahir">Tanggal Lahir:</label>
-            <input id="tanggalLahir" type="date" required />
-          </div>
-          <div>
-            <p>Jenis Kelamin:</p>
-            <input type="radio" name="gender" value="L" required /> Laki-laki
-            <input type="radio" name="gender" value="P" /> Perempuan
-          </div>
-          <br />
-          <div>
-            <label for="ktp">Foto KTP: </label>
-            <input id="ktp" type="file" accept="image/*" required />
-          </div>
-          <br />
-          <div>
-            <label for="sim">Foto SIM: </label>
-            <input id="sim" type="file" accept="image/*" required />
-          </div>
-        </div>
+          <tr>
+            <td>
+              <label for="nik">NIK:</label>
+            </td>
+            <td>
+              <input id="nik" type="test" placeholder="masukkan nik" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="alamat">Alamat:</label>
+            </td>
+            <td>
+              <textarea
+                id="alamat"
+                rows="3"
+                placeholder="masukkan alamat"
+                required
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="tanggalLahir">Tanggal Lahir:</label>
+            </td>
+            <td>
+              <input id="tanggalLahir" type="date" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Jenis Kelamin:</p>
+            </td>
+            <td>
+              <input type="radio" name="gender" value="L" required />
+              Laki-laki
+              <input type="radio" name="gender" value="P" /> Perempuan
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="ktp">Foto KTP: </label>
+            </td>
+            <td>
+              <input id="ktp" type="file" accept="image/*" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="sim">Foto SIM: </label>
+            </td>
+            <td>
+              <input id="sim" type="file" accept="image/*" required />
+            </td>
+          </tr>
 
-        <br />
-
-        <div>
-          <!-- Informasi kendaraan -->
-          <h3>Informasi Kendaraan</h3>
-          <div>
-            <label for="plat">No. Plat Kendaraan:</label>
-            <input
-              id="plat"
-              type="test"
-              placeholder="masukkan no. plat"
-              required
-            />
-          </div>
-          <br />
-          <div>
-            <label for="jenis">Jenis Kendaraan: </label>
-            <select id="jenis" required>
-              <option value="">Pilih Jenis Kendaraan</option>
-              <option value="motor">Motor</option>
-              <option value="mobil">Mobil</option>
-            </select>
-          </div>
-          <br />
-          <div>
-            <label for="warna">Warna Kendaraan</label>
-            <input id="warna" type="color" />
-          </div>
-          <br />
-          <div>
-            <label for="STNK">Foto STNK: </label>
-            <input id="STNK" type="file" accept="image/*" required />
-          </div>
-          <br />
-          <div>
-            <label for="fotoKendaraan">Foto kendaraan: </label>
-            <input id="fotoKendaraan" type="file" accept="image/*" required />
-          </div>
-        </div>
-
-        <br />
-
-        <div> <!-- Link navigasi -->
-          <p>Sudah punya akun? <a href="login.html">Masuk disini</a></p>
-          <p>
-            Daftar sebagai pengguna?
-            <a href="registerUser.html">Daftar disini</a>
-          </p>
-        </div>
-
-        <br />
-
-        <div> <!-- Persetujuan -->
-          <div>
-            <input type="checkbox" required />
-            Saya menyetujui <a href="#">syarat & ketentuan</a> sebagai driver
-          </div>
-          <br />
-          <button>Daftar</button>
-          <a href="home.html">kembali</a>
-        </div>
+          <tr>
+            <td colspan="2">
+              <center>
+                <h3>Informasi Kendaraan</h3>
+                <hr />
+              </center>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="plat">No. Plat Kendaraan:</label>
+            </td>
+            <td>
+              <input
+                id="plat"
+                type="text"
+                placeholder="masukkan no. plat"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="jenis">Jenis Kendaraan: </label>
+            </td>
+            <td>
+              <select id="jenis" required>
+                <option value="">Pilih Jenis Kendaraan</option>
+                <option value="motor">Motor</option>
+                <option value="mobil">Mobil</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="warna">Warna Kendaraan</label>
+            </td>
+            <td>
+              <input id="warna" type="color" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="STNK">Foto STNK: </label>
+            </td>
+            <td>
+              <input id="STNK" type="file" accept="image/*" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="fotoKendaraan">Foto kendaraan: </label>
+            </td>
+            <td>
+              <input id="fotoKendaraan" type="file" accept="image/*" required />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <p>Sudah punya akun? <a href="login.html">Masuk disini</a></p>
+              <p>
+                Daftar sebagai pengguna?
+                <a href="registerUser.html">Daftar disini</a>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="checkbox" required />
+              Saya menyetujui <a href="#">syarat & ketentuan</a> sebagai driver
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button type="submit">Daftar</button>
+            </td>
+          </tr>
+        </table>
       </form>
-    </div>
+    </center>
   </body>
 </html>
