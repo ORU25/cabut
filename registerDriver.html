@@ -3,255 +3,427 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Daftar</title>
+    <title>Daftar Driver - CABUT</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        background-color: beige;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      
+      .header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      
+      .header h1 {
+        color: green;
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      .header p {
+        color: #555;
+        font-size: 1.1rem;
+      }
+      
+      .register-container {
+        width: 100%;
+        max-width: 800px;
+        background-color: rgb(250, 250, 250);
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0px 7px 24px 5px rgba(164,164,164,0.33);
+        margin: 0 auto 2rem;
+      }
+      
+      .register-container h1 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        color: #333;
+      }
+      
+      .section-title {
+        margin: 1.5rem 0 1rem 0;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid green;
+        color: #444;
+      }
+      
+      .form-group {
+        margin-bottom: 1.2rem;
+      }
+      
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        color: #444;
+      }
+      
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 0.8rem;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        background-color: white;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+      }
+      
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        border-color: green;
+        outline: none;
+      }
+      
+      .form-group textarea {
+        resize: vertical;
+        min-height: 80px;
+      }
+      
+      .radio-group {
+        margin: 1rem 0;
+      }
+      
+      .radio-group p {
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        color: #444;
+      }
+      
+      .radio-options {
+        display: flex;
+        gap: 1rem;
+      }
+      
+      .radio-options label {
+        display: flex;
+        align-items: center;
+        font-weight: normal;
+        cursor: pointer;
+      }
+      
+      .radio-options input {
+        width: auto;
+        margin-right: 0.5rem;
+      }
+      
+      .form-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -0.5rem;
+      }
+      
+      .form-col {
+        flex: 1 0 100%;
+        padding: 0 0.5rem;
+      }
+      
+      .link-group {
+        text-align: center;
+        margin: 1.5rem 0;
+      }
+      
+      .link-group p {
+        margin-bottom: 0.8rem;
+      }
+      
+      .link-group a {
+        text-decoration: none;
+        color: green;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+      
+      .link-group a:hover {
+        color: darkgreen;
+      }
+      
+      .agreement {
+        display: flex;
+        align-items: flex-start;
+        margin: 1.5rem 0;
+      }
+      
+      .agreement input {
+        margin-right: 0.5rem;
+        margin-top: 0.2rem;
+      }
+      
+      .agreement a {
+        text-decoration: none;
+        color: green;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+      
+      .agreement a:hover {
+        color: darkgreen;
+      }
+      
+      .register-button {
+        display: block;
+        width: 100%;
+        background: green;
+        border-radius: 10px;
+        font-size: 1.2rem;
+        padding: 0.8rem;
+        color: white;
+        font-weight: bold;
+        border: 3px solid darkgreen;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin: 1.5rem 0;
+      }
+      
+      .register-button:hover {
+        background-color: darkgreen;
+      }
+      
+      .back-link {
+        text-align: center;
+      }
+      
+      .back-link a {
+        text-decoration: none;
+        color: green;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+      
+      .back-link a:hover {
+        color: darkgreen;
+      }
+
+      img {
+        align-items: center;
+      }
+
+      footer {
+        border-top: #333 solid 0.2rem;
+        padding-top: .8rem;
+        background-color: darkgreen;
+        font-weight: 600;
+        color: white;
+        font-size: small;
+      }
+      
+      @media (min-width: 768px) {
+        .form-col {
+          flex: 1 0 50%;
+        }
+        
+        .register-container {
+          padding: 2.5rem;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .header h1 {
+          font-size: 2rem;
+        }
+        
+        .register-container {
+          padding: 1.5rem;
+        }
+        
+        .register-container h1 {
+          font-size: 1.5rem;
+        }
+        
+        .radio-options {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+      }
+    </style>
   </head>
   <body>
-    <center>
-      <img
-        src="https://media.discordapp.net/attachments/772822526279548978/1410202438346080421/Cabut_Pic.png?ex=68b028dd&is=68aed75d&hm=23c99c6a6b83645c1cf31d7a728ef36daebacac5ae24903363f5dc35c6384242&=&format=webp&quality=lossless&width=639&height=576"
-        alt="Logo Cabut"
-        width="110px"
-      />
-      <br />
-      <img
-        src="https://media.discordapp.net/attachments/772822526279548978/1410201709309067344/Cabut_Text.png?ex=68b0282f&is=68aed6af&hm=e1a2513b492b9a73cf8b846f790ab8ba36586b9a46ee2ebab4bf02e30b445e23&=&format=webp&quality=lossless&width=880&height=281"
-        alt="Logo Cabut"
-        width="110px"
-      />
-      <br />
-      <br />
-      <i>Siap Antar Kamu Cabut Kemana Pun</i>
-    </center>
+    <img
+      src="https://media.discordapp.net/attachments/772822526279548978/1410202438346080421/Cabut_Pic.png?ex=68b028dd&is=68aed75d&hm=23c99c6a6b83645c1cf31d7a728ef36daebacac5ae24903363f5dc35c6384242&=&format=webp&quality=lossless&width=639&height=576"
+      alt="Logo Cabut"
+      width="110px"
+    />
+    <br />
+    <img
+      src="https://media.discordapp.net/attachments/772822526279548978/1410201709309067344/Cabut_Text.png?ex=68b0282f&is=68aed6af&hm=e1a2513b492b9a73cf8b846f790ab8ba36586b9a46ee2ebab4bf02e30b445e23&=&format=webp&quality=lossless&width=880&height=281"
+      alt="Logo Cabut"
+      width="110px"
+    />
     <br />
     <br />
-    <center>
-      <h2>Daftar Driver</h2>
-      <form action="#">
-        <table cellspacing="10">
-          <tr>
-            <td colspan="2">
-              <center>
-                <h3>Informasi Akun</h3>
-                <hr />
-              </center>
-            </td>
-          </tr>
-          <tr>
-            <td>
+    <i>Siap Antar Kamu Cabut Kemana Pun</i>
+    <br />
+    <div class="register-container">
+      <h1>Daftar Driver</h1>
+      <form action="home.html">
+        <!-- Informasi Akun -->
+        <h3 class="section-title">Informasi Akun</h3>
+        <div class="form-row">
+          <div class="form-col">
+            <div class="form-group">
               <label for="nama">Nama Lengkap:</label>
-            </td>
-            <td>
-              <input
-                id="nama"
-                type="test"
-                placeholder="masukkan nama lengkap"
-                required
-              />
-            </td>
-          </tr>
-          <tr>
-            <td>
+              <input id="nama" type="text" placeholder="Masukkan nama lengkap" required />
+            </div>
+          </div>
+          
+          <div class="form-col">
+            <div class="form-group">
               <label for="email">Email:</label>
-            </td>
-            <td>
-              <input
-                id="email"
-                type="email"
-                placeholder="masukkan email"
-                required
-              />
-            </td>
-          </tr>
-          <tr>
-            <td>
+              <input id="email" type="email" placeholder="Masukkan email" required />
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-col">
+            <div class="form-group">
               <label for="telepon">No. Telepon:</label>
-            </td>
-            <td>
-              <input
-                id="telepon"
-                type="text"
-                placeholder="masukkan nomor telepon"
-                required
-              />
-            </td>
-          </tr>
-          <tr>
-            <td>
+              <input id="telepon" type="tel" placeholder="Masukkan nomor telepon" required />
+            </div>
+          </div>
+          
+          <div class="form-col">
+            <div class="form-group">
               <label for="password">Password:</label>
-            </td>
-            <td>
-              <input
-                id="password"
-                type="password"
-                placeholder="masukkan password"
-                required
-              />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="confirmPassword">Konfirmasi Password:</label>
-            </td>
-            <td>
-              <input
-                id="confirmPassword"
-                type="password"
-                placeholder="masukkan ulang password"
-                required
-              />
-            </td>
-          </tr>
-
-          <tr>
-            <td colspan="2">
-              <center>
-                <h3>Informasi Pribadi</h3>
-                <hr />
-              </center>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
+              <input id="password" type="password" placeholder="Masukkan password" required />
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="confirmPassword">Konfirmasi Password:</label>
+          <input id="confirmPassword" type="password" placeholder="Masukkan ulang password" required />
+        </div>
+        
+        <!-- Informasi Pribadi -->
+        <h3 class="section-title">Informasi Pribadi</h3>
+        <div class="form-row">
+          <div class="form-col">
+            <div class="form-group">
               <label for="nik">NIK:</label>
-            </td>
-            <td>
-              <input id="nik" type="test" placeholder="masukkan nik" required />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="alamat">Alamat:</label>
-            </td>
-            <td>
-              <textarea
-                id="alamat"
-                rows="3"
-                placeholder="masukkan alamat"
-                required
-              ></textarea>
-            </td>
-          </tr>
-          <tr>
-            <td>
+              <input id="nik" type="text" placeholder="Masukkan NIK" required />
+            </div>
+          </div>
+          
+          <div class="form-col">
+            <div class="form-group">
               <label for="tanggalLahir">Tanggal Lahir:</label>
-            </td>
-            <td>
               <input id="tanggalLahir" type="date" required />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>Jenis Kelamin:</p>
-            </td>
-            <td>
-              <input type="radio" name="gender" value="L" required />
-              Laki-laki
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="alamat">Alamat:</label>
+          <textarea id="alamat" rows="3" placeholder="Masukkan alamat" required></textarea>
+        </div>
+        
+        <div class="radio-group">
+          <p>Jenis Kelamin:</p>
+          <div class="radio-options">
+            <label>
+              <input type="radio" name="gender" value="L" required /> Laki-laki
+            </label>
+            <label>
               <input type="radio" name="gender" value="P" /> Perempuan
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="ktp">Foto KTP: </label>
-            </td>
-            <td>
+            </label>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-col">
+            <div class="form-group">
+              <label for="ktp">Foto KTP:</label>
               <input id="ktp" type="file" accept="image/*" required />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="sim">Foto SIM: </label>
-            </td>
-            <td>
+            </div>
+          </div>
+          
+          <div class="form-col">
+            <div class="form-group">
+              <label for="sim">Foto SIM:</label>
               <input id="sim" type="file" accept="image/*" required />
-            </td>
-          </tr>
-
-          <tr>
-            <td colspan="2">
-              <center>
-                <h3>Informasi Kendaraan</h3>
-                <hr />
-              </center>
-            </td>
-          </tr>
-          <tr>
-            <td>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Informasi Kendaraan -->
+        <h3 class="section-title">Informasi Kendaraan</h3>
+        <div class="form-row">
+          <div class="form-col">
+            <div class="form-group">
               <label for="plat">No. Plat Kendaraan:</label>
-            </td>
-            <td>
-              <input
-                id="plat"
-                type="text"
-                placeholder="masukkan no. plat"
-                required
-              />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="jenis">Jenis Kendaraan: </label>
-            </td>
-            <td>
+              <input id="plat" type="text" placeholder="Masukkan no. plat" required />
+            </div>
+          </div>
+          
+          <div class="form-col">
+            <div class="form-group">
+              <label for="jenis">Jenis Kendaraan:</label>
               <select id="jenis" required>
                 <option value="">Pilih Jenis Kendaraan</option>
                 <option value="motor">Motor</option>
                 <option value="mobil">Mobil</option>
               </select>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="warna">Warna Kendaraan</label>
-            </td>
-            <td>
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-col">
+            <div class="form-group">
+              <label for="warna">Warna Kendaraan:</label>
               <input id="warna" type="color" />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="STNK">Foto STNK: </label>
-            </td>
-            <td>
+            </div>
+          </div>
+          
+          <div class="form-col">
+            <div class="form-group">
+              <label for="STNK">Foto STNK:</label>
               <input id="STNK" type="file" accept="image/*" required />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="fotoKendaraan">Foto kendaraan: </label>
-            </td>
-            <td>
-              <input id="fotoKendaraan" type="file" accept="image/*" required />
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <p>Sudah punya akun? <a href="login.html">Masuk disini</a></p>
-              <p>
-                Daftar sebagai pengguna?
-                <a href="registerUser.html">Daftar disini</a>
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <input type="checkbox" required />
-              Saya menyetujui <a href="#">syarat & ketentuan</a> sebagai driver
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <button type="submit">Daftar</button>
-            </td>
-          </tr>
-        </table>
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="fotoKendaraan">Foto Kendaraan:</label>
+          <input id="fotoKendaraan" type="file" accept="image/*" required />
+        </div>
+        
+        <div class="link-group">
+          <p>Sudah punya akun? <a href="login.html">Masuk disini</a></p>
+          <p>Daftar sebagai pengguna? <a href="registerUser.html">Daftar disini</a></p>
+        </div>
+        
+        <div class="agreement">
+          <input type="checkbox" id="agree" required />
+          <label for="agree">Saya menyetujui <a href="#">syarat & ketentuan</a> sebagai driver</label>
+        </div>
+        
+        <button type="submit" class="register-button">Daftar</button>
+        
+        <div class="back-link">
+          <a href="home.html">Kembali</a>
+        </div>
       </form>
-    </center>
+    </div>
     <br />
     <br />
   </body>
   <footer>
-    <hr />
     <center>
       <p>M. Haykal Makhmud [2409106005] - Dwi Prasetyawan [2409106028]</p>
       <p>&copy; 2025 Haykal and Dwi. All rights reserved.</p>
