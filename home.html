@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Selamat Datang di CABUT</h1>
+    <h3>Email Anda: <span id="email"></span></h3>
+    
+</body>
+<script>
+    const email = sessionStorage.getItem('email');
+    document.getElementById('email').textContent = email;
+    
+    if(!email){
+        alert("🚫 Silakan login terlebih dahulu!");
+        window.location.href = "login.html";
+    }
+</script>
+</html>

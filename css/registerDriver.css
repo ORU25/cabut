@@ -1,0 +1,249 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: beige;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.header h1 {
+  color: green;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.register-container {
+  width: 100%;
+  max-width: 800px;
+  background-color: rgb(250, 250, 250);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0px 7px 24px 5px rgba(164, 164, 164, 0.33);
+  margin: 0 auto 2rem;
+}
+
+.register-container h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.section-title {
+  margin: 1.5rem 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid green;
+  color: #444;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #444;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: white;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: green;
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.radio-group {
+  margin: 1rem 0;
+}
+
+.radio-group p {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #444;
+}
+
+.radio-options {
+  display: flex;
+  gap: 1rem;
+}
+
+.radio-options label {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.radio-options input {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.5rem;
+}
+
+.form-col {
+  flex: 1 0 100%;
+  padding: 0 0.5rem;
+}
+
+.link-group {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.link-group p {
+  margin-bottom: 0.8rem;
+}
+
+.link-group a {
+  text-decoration: none;
+  color: green;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.link-group a:hover {
+  color: darkgreen;
+}
+
+.agreement {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 3rem;
+  padding-left: 10px;
+}
+
+.agreement input {
+  margin-right: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.agreement a {
+  text-decoration: none;
+  color: green;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.agreement a:hover {
+  color: darkgreen;
+}
+
+.register-button {
+  display: block;
+  width: 100%;
+  background: green;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  color: white;
+  font-weight: bold;
+  border: 3px solid darkgreen;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 1.5rem 0;
+}
+
+.register-button:hover {
+  background-color: darkgreen;
+}
+
+.back-link {
+  text-align: center;
+}
+
+.back-link a {
+  text-decoration: none;
+  color: green;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.back-link a:hover {
+  color: darkgreen;
+}
+
+img {
+  align-items: center;
+}
+
+footer {
+  border-top: #333 solid 0.2rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  text-align: center;
+  background-color: darkgreen;
+  font-weight: 600;
+  color: white;
+  font-size: small;
+}
+
+@media (min-width: 768px) {
+  .form-col {
+    flex: 1 0 50%;
+  }
+
+  .register-container {
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .register-container {
+    padding: 1.5rem;
+  }
+
+  .register-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .radio-options {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
